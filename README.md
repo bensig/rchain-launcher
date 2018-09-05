@@ -21,7 +21,7 @@ This script has variables in it, requirements:
 7. Change variables for private key, network, and bootstrap node in the rchain_docker.sh file
 * `nano rchain_docker.sh`
 8. Run the script
-./rchain_docker.sh
+* `./rchain_docker.sh`
 
 ### Generating RChain Keys
 To get your rnode key generated, start rnode in standalone mode (see below) - let it run for 1 minute, and then stop it. Go to your rnode/genesis folder.
@@ -30,13 +30,13 @@ There will be 5 .sk files in there. The title of each file is the pub key and th
 
 #### To start your node in standalone mode:
 1. First create a local rnode directory
-`mkdir ~/rnode`
+* `mkdir ~/rnode`
 
 2. Pull the rnode latest docker image
-`docker pull rchain/rnode:latest`
+* `docker pull rchain/rnode:latest`
 
 3. Then run the docker command
-`docker run -u root -it --network rnode-net --name rnode-standalone -v "$HOME/rnode":/var/lib/rnode rchain/rnode:latest run --standalone`
+* `docker run -u root -it --network rnode-net --name rnode-standalone -v "$HOME/rnode":/var/lib/rnode rchain/rnode:latest run --standalone`
 
 4. After it runs for 1 minute, stop the docker using control-c to break
 
