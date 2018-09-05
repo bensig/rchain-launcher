@@ -7,18 +7,21 @@ This script has variables in it, requirements:
 3. Have an RChain key pair created (see below)
 
 ## For Ubuntu 18.04:
-1. Install Docker `sudo apt install docker.io`
+1. Install Docker 
+*`sudo apt install docker.io`
 2. Add your current user to the docker group
-`sudo gpasswd -a $USER docker`
-3. Log out and log back in `exit`
+* `sudo gpasswd -a $USER docker`
+3. Log out and log back in 
+* `exit`
 4. Create your docker network
 `docker network create rnode-net`
 5. Pull the latest docker image
-`docker pull rchain/rnode:latest`
+* `docker pull rchain/rnode:latest`
 6. Get your docker key (see below), find the bootstrap node, and get the links for the bonds.txt and wallets.txt files.
 7. Change variables for private key, network, and bootstrap node in the rchain_docker.sh file
-`nano rchain_docker.sh`
-8. Run
+* `nano rchain_docker.sh`
+8. Run the script
+./rchain_docker.sh
 
 ### Generating RChain Keys
 To get your rnode key generated, start rnode in standalone mode (see below) - let it run for 1 minute, and then stop it. Go to your rnode/genesis folder.
