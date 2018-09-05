@@ -7,11 +7,10 @@ This script has variables in it, requirements:
 3. Have an RChain key pair created (see below)
 
 ## For Ubuntu 18.04:
-1. Install Docker
-- `sudo apt install docker.io`
+1. Install Docker `sudo apt install docker.io`
 2. Add your current user to the docker group
 `sudo gpasswd -a $USER docker`
-3. Log out and log back in
+3. Log out and log back in `exit`
 4. Create your docker network
 `docker network create rnode-net`
 5. Pull the latest docker image
